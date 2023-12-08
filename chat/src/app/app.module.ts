@@ -27,10 +27,11 @@ export class SocketTwo extends Socket {
 @NgModule({
   declarations: [
     AppComponent,
-    
+
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     SocketIoModule.forRoot(config),
     // RouterModule.forRoot([]),
     FormsModule,
