@@ -11,36 +11,17 @@ import { ChatComponentModule } from './chat-component/chat-component.module';
 
 const config: SocketIoConfig = { url: 'http://localhost:8988', options: {} };
 
-@Injectable()
-export class SocketOne extends Socket {
-  constructor() {
-    super({ url: 'http://url_one:portOne', options: {} });
-  }
-}
-
-@Injectable()
-export class SocketTwo extends Socket {
-  constructor() {
-    super({ url: 'http://url_two:portTwo', options: {} });
-  }
-}
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
     SocketIoModule.forRoot(config),
-    // RouterModule.forRoot([]),
     FormsModule,
     AppRoutingModule,
     ChatComponentModule
-  ],
-  providers: [
-    SocketOne,
-    SocketTwo,
   ],
   bootstrap: [AppComponent]
 })
